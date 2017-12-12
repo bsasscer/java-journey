@@ -5,7 +5,8 @@ public class SimpleMadLibs {
     public static void main(String[] args) {
         //__Name__ is a __adjective__ __noun__. She is always __adverb__ __verb__.
         Console console = System.console();
-        int age = 12;
+        String ageAsString = console.readLine("How old are you? ");
+        int age = Integer.parseInt(ageAsString);
         if (age < 13) {
             console.printf("You need to be 13 years old to access this program.\n");
             System.exit(0);
