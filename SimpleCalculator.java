@@ -15,16 +15,12 @@ public class SimpleCalculator {
     public int divide(int a, int b) {
         if (b <= 0) {
             System.out.println("Error! Dividing by zero is not allowed");
-        } else {
-            return a / b;
         }
         return a / b;
     }
     public int modulo(int a, int b) {
         if (b <= 0) {
             System.out.println("Error! Dividing by zero is not allowed");
-        } else {
-            return a % b;
         }
         return a % b;
     }
@@ -33,5 +29,6 @@ public class SimpleCalculator {
         System.out.println(myCalculator.add(5, 7));
         System.out.println(myCalculator.subtract(45, 11));
         System.out.println(myCalculator.modulo(24, 9));
+        System.out.println(myCalculator.divide(48, 8));
     }
 }
