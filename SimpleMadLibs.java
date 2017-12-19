@@ -13,7 +13,16 @@ public class SimpleMadLibs {
         }
         String name = console.readLine("Enter your name: ");
         String adjective = console.readLine("Enter an adjective: ");
-        String noun = console.readLine("Enter a noun: ");
+        String noun;
+        boolean isInvalidWord;
+        do {
+            noun = console.readLine("Enter a noun: ");
+            isInvalidWord = (noun.equalsIgnoreCase("dork") ||
+                            noun.equalsIgnoreCase("jerk"));
+            if (isInvalidWord) {
+                console.printf("That language is not allowed. Try again. \n\n");
+            }
+        } while (isInvalidWord);
         String adverb = console.readLine("Enter an adverb: ");
         String verb = console.readLine("Enter a verb ending in -ing: ");
 
