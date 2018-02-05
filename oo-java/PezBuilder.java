@@ -21,5 +21,12 @@ public class PezBuilder {
         if (dispenser.isEmpty()) {
             System.out.println("Ate all the PEZ");
         }
+        try {
+            dispenser.fill(400);
+        } catch(IllegalArgumentException iae) {
+            System.out.println("Whoa there.");
+            System.out.printf("The error was %s",
+                            iae.getMessage());
+        }
     }
 }
