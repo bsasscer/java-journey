@@ -30,4 +30,14 @@ public class Prompter {
                         game.getRemainingTries(),
                         game.getCurrentProgress());
     }
+
+    public void displayOutcome() {
+        if (game.isWon()) {
+            System.out.printf("Congrats! You won with %d tries remaining.%n",
+                                game.getRemainingTries());
+        } else {
+            System.out.printf("Sad day. The word was '%s'. %n",
+                                game.getAnswer());
+        }
+    }
 }
